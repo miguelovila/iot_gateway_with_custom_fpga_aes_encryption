@@ -37,17 +37,18 @@ compile:
 # 2. Run the simulation    
 run: compile 
 	@echo "--- Running Simulation ---" 
-	-$(GHDL_CMD) -r $(GHDL_FLAGS) $(TOP_ENTITY) --vcd=$(WAVE_FILE) 
+	$(GHDL_CMD) -r $(GHDL_FLAGS) $(TOP_ENTITY) --vcd=$(WAVE_FILE) 
 	
-# 3. Open the Waveform Viewer     
-view: 
-	@echo "--- Opening Waveform ---"   
-	$(VIEWER) $(WAVE_FILE) &    
+# 3. Open the Waveform Viewer
+view:
+	@echo "--- Opening Waveform ---"
+	$(VIEWER) $(WAVE_FILE) > /dev/null 2>&1 &    
 	
 # 4. Clean up generated files     
 clean:
 	@echo "--- Cleaning ---"    
 	$(GHDL_CMD) --clean  
-	rm -f $(WAVE_FILE) *.cf     
+	rm -f $(WAVE_FILE) *.cf
+	clear
 	
 .PHONY: all compile run view clean

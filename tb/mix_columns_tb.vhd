@@ -37,27 +37,22 @@ BEGIN
         state_in <= x"D4BF5D30E0B452AEB84111F11E2798E5";
         WAIT FOR 10 ns;
         ASSERT state_out = x"046681E5E0CB199A48F8D37A2806264C"
-        REPORT "FAIL: MixColumns test 1 failed" SEVERITY
-            error;
+        REPORT "FAIL: MixColumns test 1 failed" SEVERITY failure;
 
         -- Test vector 2: Zeros deve ser zeros
         state_in <= x"00000000000000000000000000000000";
         WAIT FOR 10 ns;
         ASSERT state_out = x"00000000000000000000000000000000"
-        REPORT "FAIL: MixColumns test 2 (all zeros) failed" SEVERITY
-            error;
+        REPORT "FAIL: MixColumns test 2 (all zeros) failed" SEVERITY failure;
 
         -- Test vector 3: NIST Appendix B Round 3
         state_in <= x"ACC1D6B8EFB55A7B1323CFDF457311B5";
         WAIT FOR 10 ns;
         ASSERT state_out = x"75EC0993200B633353C0CF7CBB25D0DC"
-        REPORT "FAIL: MixColumns test 3 failed" SEVERITY
-            error;
+        REPORT "FAIL: MixColumns test 3 failed" SEVERITY failure;
 
         REPORT "SUCCESS: All MixColumns tests passed!" SEVERITY note;
-
-        WAIT FOR 10 ns;
-        ASSERT false REPORT "Simulation finished" SEVERITY failure;
+        WAIT;
     END PROCESS;
 
 END Sim;

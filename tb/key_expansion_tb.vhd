@@ -26,12 +26,11 @@ BEGIN
 
         -- Test 1: Round 0 -> Round 1
         -- Expected Round 1 key: a0fafe17 88542cb1 23a33939 2a6c7605
-        key_in <= x"2b7e151628aed2a6abf7158809cf4f3c";
+        key_in <= x"2b7e151628aed2a6abf7158809cf4f3C";
         rcon <= x"01";
         WAIT FOR 10 ns;
         ASSERT key_out = x"a0fafe1788542cb123a339392a6c7605"
-        REPORT "FAIL: Key expansion round 0->1 failed" SEVERITY
-            error;
+        REPORT "FAIL: Key expansion round 0->1 failed" SEVERITY failure;
 
         -- Test 2: Round 1 -> Round 2
         -- Expected Round 2 key: f2c295f2 7a96b943 5935807a 7359f67f
@@ -39,8 +38,7 @@ BEGIN
         rcon <= x"02";
         WAIT FOR 10 ns;
         ASSERT key_out = x"f2c295f27a96b9435935807a7359f67f"
-        REPORT "FAIL: Key expansion round 1->2 failed" SEVERITY
-            error;
+        REPORT "FAIL: Key expansion round 1->2 failed" SEVERITY failure;
 
         -- Test 3: Round 2 -> Round 3
         -- Expected Round 3 key: 3d80477d 4716fe3e 1e237e44 6d7a883b
@@ -48,13 +46,10 @@ BEGIN
         rcon <= x"04";
         WAIT FOR 10 ns;
         ASSERT key_out = x"3d80477d4716fe3e1e237e446d7a883b"
-        REPORT "FAIL: Key expansion round 2->3 failed" SEVERITY
-            error;
+        REPORT "FAIL: Key expansion round 2->3 failed" SEVERITY failure;
 
         REPORT "SUCCESS: All key expansion tests passed!" SEVERITY note;
-
-        WAIT FOR 10 ns;
-        ASSERT false REPORT "Simulation finished" SEVERITY failure;
+        WAIT;
     END PROCESS;
 
 END Sim;
