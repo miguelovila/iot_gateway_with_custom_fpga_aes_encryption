@@ -1,0 +1,6 @@
+# GHDL build artifacts
+work-obj08.cf
+*.o
+
+# Simulation output
+wave.vcd
