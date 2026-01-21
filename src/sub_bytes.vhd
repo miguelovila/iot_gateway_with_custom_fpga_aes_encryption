@@ -23,8 +23,8 @@ BEGIN
     gen_sboxes : FOR i IN 0 TO 15 GENERATE
         sbox_inst : ENTITY work.sbox
             PORT MAP(
-                input_byte => state_in((i + 1) * 8 - 1 DOWNTO i * 8),
-                output_byte => state_out((i + 1) * 8 - 1 DOWNTO i * 8)
+                input_byte => state_in(127 - i * 8 DOWNTO 120 - i * 8),
+                output_byte => state_out(127 - i * 8 DOWNTO 120 - i * 8)
             );
     END GENERATE;
 END Structural;
