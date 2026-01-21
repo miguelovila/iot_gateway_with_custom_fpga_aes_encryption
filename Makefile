@@ -4,10 +4,11 @@
 # TOP_ENTITY = sub_bytes_tb
 # TOP_ENTITY = gf_mult_by2_tb
 # TOP_ENTITY = mix_columns_tb
-TOP_ENTITY = key_expansion_tb
+# TOP_ENTITY = key_expansion_tb
+TOP_ENTITY = aes_round_tb
 
 # All testbenches for run-all
-ALL_TBS = sbox_tb shift_rows_tb sub_bytes_tb gf_mult_by2_tb mix_columns_tb key_expansion_tb
+ALL_TBS = sbox_tb shift_rows_tb sub_bytes_tb gf_mult_by2_tb mix_columns_tb key_expansion_tb aes_round_tb
 
 # FILES
 WAVE_FILE = wave.vcd
