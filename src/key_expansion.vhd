@@ -49,10 +49,10 @@ ENTITY key_expansion IS
 END key_expansion;
 
 ARCHITECTURE Dataflow OF key_expansion IS
-    ALIAS w0 : word_t IS key_in (31 DOWNTO   0);
-    ALIAS w1 : word_t IS key_in (63 DOWNTO  32);
-    ALIAS w2 : word_t IS key_in (95 DOWNTO  64);
-    ALIAS w3 : word_t IS key_in (127 DOWNTO 96);
+    ALIAS w0 : word_t IS key_in (127 DOWNTO 96);
+    ALIAS w1 : word_t IS key_in (95 DOWNTO  64);
+    ALIAS w2 : word_t IS key_in (63 DOWNTO  32);
+    ALIAS w3 : word_t IS key_in (31 DOWNTO   0);
 
     SIGNAL w3_rotated : word_t;
     SIGNAL w3_subbed  : word_t;
@@ -61,33 +61,33 @@ ARCHITECTURE Dataflow OF key_expansion IS
     SIGNAL nw0, nw1, nw2, nw3 : word_t;
 BEGIN
     -- Rotate w3
-    w3_rotated <= w3(7 DOWNTO 0) & w3(31 DOWNTO 8);
+    w3_rotated <= w3(23 DOWNTO 0) & w3(31 DOWNTO 24);
 
     -- SubWord: apply S-box to each byte
     sbox_0: ENTITY work.sbox
         PORT MAP (
-            input_byte  => w3_rotated(7 DOWNTO 0),
-            output_byte =>  w3_subbed(7 DOWNTO 0)
+            input_byte  => w3_rotated(31 DOWNTO 24),
+            output_byte =>  w3_subbed(31 DOWNTO 24)
         );
-    sbox_1: entity work.sbox                                                          
+    sbox_1: entity work.sbox
         PORT MAP (
-            input_byte => w3_rotated(15 DOWNTO 8),                              
-            output_byte => w3_subbed(15 DOWNTO 8)
-        );                             
-    sbox_2: entity work.sbox                                                          
-        PORT MAP (
-            input_byte => w3_rotated(23 DOWNTO 16),                             
+            input_byte => w3_rotated(23 DOWNTO 16),
             output_byte => w3_subbed(23 DOWNTO 16)
-        );                            
-    sbox_3: entity work.sbox                                                          
+        );
+    sbox_2: entity work.sbox
         PORT MAP (
-            input_byte => w3_rotated(31 DOWNTO 24),                             
-            output_byte => w3_subbed(31 DOWNTO 24)
+            input_byte => w3_rotated(15 DOWNTO 8),
+            output_byte => w3_subbed(15 DOWNTO 8)
+        );
+    sbox_3: entity work.sbox
+        PORT MAP (
+            input_byte => w3_rotated(7 DOWNTO 0),
+            output_byte => w3_subbed(7 DOWNTO 0)
         );
 
     -- g(w3) = SubWord(RotWord(w3)) XOR Rcon
-    g_result(7 DOWNTO 0)   <= w3_subbed(7 DOWNTO 0) XOR rcon;
-    g_result(31 DOWNTO 8)  <= w3_subbed(31 DOWNTO 8);
+    g_result(31 DOWNTO 24) <= w3_subbed(31 DOWNTO 24) XOR rcon;
+    g_result(23 DOWNTO 0)  <= w3_subbed(23 DOWNTO 0);
 
     -- Generate new words
     nw0 <= w0 XOR g_result;
@@ -96,5 +96,5 @@ BEGIN
     nw3 <= nw2 XOR w3;
                     
     -- Concatenate new words into output key
-    key_out <= nw3 & nw2 & nw1 & nw0;
+    key_out <= nw0 & nw1 & nw2 & nw3;
 END Dataflow;
