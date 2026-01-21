@@ -48,7 +48,7 @@ ARCHITECTURE Structural OF mix_columns IS
     -- Função auxiliar para extrair um byte específico do state
     FUNCTION get_byte(state : block_t; index : INTEGER) RETURN byte_t IS
     BEGIN
-        RETURN state((index + 1) * 8 - 1 DOWNTO index * 8);
+        RETURN state(127 - index * 8 DOWNTO 120 - index * 8);
     END FUNCTION;
 
     -- Separamos o state_in em colunas para facilitar a manipulação
@@ -104,23 +104,23 @@ BEGIN
     col3_out(3) <= (col3_x2(0) XOR  col3_in(0)) XOR  col3_in(1)  XOR  col3_in(2)  XOR col3_x2(3);
 
     -- Recombinar colunas em state_out
-    state_out(  7 DOWNTO   0) <= col0_out(0);
-    state_out( 15 DOWNTO   8) <= col0_out(1);
-    state_out( 23 DOWNTO  16) <= col0_out(2);
-    state_out( 31 DOWNTO  24) <= col0_out(3);
+    state_out(127 DOWNTO 120) <= col0_out(0);
+    state_out(119 DOWNTO 112) <= col0_out(1);
+    state_out(111 DOWNTO 104) <= col0_out(2);
+    state_out(103 DOWNTO  96) <= col0_out(3);
 
-    state_out( 39 DOWNTO  32) <= col1_out(0);
-    state_out( 47 DOWNTO  40) <= col1_out(1);
-    state_out( 55 DOWNTO  48) <= col1_out(2);
-    state_out( 63 DOWNTO  56) <= col1_out(3);
+    state_out( 95 DOWNTO  88) <= col1_out(0);
+    state_out( 87 DOWNTO  80) <= col1_out(1);
+    state_out( 79 DOWNTO  72) <= col1_out(2);
+    state_out( 71 DOWNTO  64) <= col1_out(3);
 
-    state_out( 71 DOWNTO  64) <= col2_out(0);
-    state_out( 79 DOWNTO  72) <= col2_out(1);
-    state_out( 87 DOWNTO  80) <= col2_out(2);
-    state_out( 95 DOWNTO  88) <= col2_out(3);
+    state_out( 63 DOWNTO  56) <= col2_out(0);
+    state_out( 55 DOWNTO  48) <= col2_out(1);
+    state_out( 47 DOWNTO  40) <= col2_out(2);
+    state_out( 39 DOWNTO  32) <= col2_out(3);
 
-    state_out(103 DOWNTO  96) <= col3_out(0);
-    state_out(111 DOWNTO 104) <= col3_out(1);
-    state_out(119 DOWNTO 112) <= col3_out(2);
-    state_out(127 DOWNTO 120) <= col3_out(3);
+    state_out( 31 DOWNTO  24) <= col3_out(0);
+    state_out( 23 DOWNTO  16) <= col3_out(1);
+    state_out( 15 DOWNTO   8) <= col3_out(2);
+    state_out(  7 DOWNTO   0) <= col3_out(3);
 END Structural;
