@@ -18,6 +18,7 @@ ARCHITECTURE Sim OF aes_core_tb IS
     SIGNAL key        : block_t;
     SIGNAL plaintext  : block_t;
     SIGNAL ciphertext : block_t;
+    SIGNAL busy       : std_logic;
     SIGNAL done       : std_logic;
 
     -- Clock period
@@ -37,6 +38,7 @@ BEGIN
             key        => key,
             plaintext  => plaintext,
             ciphertext => ciphertext,
+            busy       => busy,
             done       => done
         );
 
