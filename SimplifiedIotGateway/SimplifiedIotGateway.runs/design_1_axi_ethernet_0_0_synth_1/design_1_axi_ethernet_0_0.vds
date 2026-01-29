@@ -1,0 +1,263 @@
+#-----------------------------------------------------------
+# Vivado v2025.1 (64-bit)
+# SW Build 6140274 on Wed May 21 22:58:25 MDT 2025
+# IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+# SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+# Start of session at: Thu Jan 29 00:03:39 2026
+# Process ID         : 23100
+# Current directory  : /home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.runs/design_1_axi_ethernet_0_0_synth_1
+# Command line       : vivado -log design_1_axi_ethernet_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_axi_ethernet_0_0.tcl
+# Log file           : /home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.runs/design_1_axi_ethernet_0_0_synth_1/design_1_axi_ethernet_0_0.vds
+# Journal file       : /home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.runs/design_1_axi_ethernet_0_0_synth_1/vivado.jou
+# Running On         : gapapaio
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.3 LTS
+# Processor Detail   : AMD Ryzen 7 5800H with Radeon Graphics
+# CPU Frequency      : 3446.747 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 16069 MB
+# Swap memory        : 4294 MB
+# Total Virtual      : 20364 MB
+# Available Virtual  : 7004 MB
+#-----------------------------------------------------------
+source design_1_axi_ethernet_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/miguelovila/SimplifiedIotGateway/CustomIps'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/xilinx/2025.1/Vivado/data/ip'.
+Command: synth_design -top design_1_axi_ethernet_0_0 -part xc7a100tcsg324-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 23302
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2124.266 ; gain = 438.742 ; free physical = 1357 ; free virtual = 4235
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_ethernet_0_0' [/home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.gen/sources_1/bd/design_1/ip/design_1_axi_ethernet_0_0/synth/design_1_axi_ethernet_0_0.vhd:121]
+INFO: [Synth 8-3491] module 'bd_929b' declared at '/home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.gen/sources_1/bd/design_1/ip/design_1_axi_ethernet_0_0/bd_0/synth/bd_929b.vhd:12' bound to instance 'U0' of component 'bd_929b' [/home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.gen/sources_1/bd/design_1/ip/design_1_axi_ethernet_0_0/synth/design_1_axi_ethernet_0_0.vhd:297]
+INFO: [Synth 8-638] synthesizing module 'bd_929b' [/home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.gen/sources_1/bd/design_1/ip/design_1_axi_ethernet_0_0/bd_0/synth/bd_929b.vhd:81]
+INFO: [Synth 8-3491] module 'bd_929b_c_counter_binary_0_0' declared at '/home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.runs/design_1_axi_ethernet_0_0_synth_1/.Xil/Vivado-23100-gapapaio/realtime/bd_929b_c_counter_binary_0_0_stub.vhdl:6' bound to instance 'c_counter_binary_0' of component 'bd_929b_c_counter_binary_0_0' [/home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.gen/sources_1/bd/design_1/ip/design_1_axi_ethernet_0_0/bd_0/synth/bd_929b.vhd:420]
+INFO: [Synth 8-638] synthesizing module 'bd_929b_c_counter_binary_0_0' [/home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.runs/design_1_axi_ethernet_0_0_synth_1/.Xil/Vivado-23100-gapapaio/realtime/bd_929b_c_counter_binary_0_0_stub.vhdl:22]
+INFO: [Synth 8-3491] module 'bd_929b_c_shift_ram_0_0' declared at '/home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.runs/design_1_axi_ethernet_0_0_synth_1/.Xil/Vivado-23100-gapapaio/realtime/bd_929b_c_shift_ram_0_0_stub.vhdl:6' bound to instance 'c_shift_ram_0' of component 'bd_929b_c_shift_ram_0_0' [/home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.gen/sources_1/bd/design_1/ip/design_1_axi_ethernet_0_0/bd_0/synth/bd_929b.vhd:427]
+INFO: [Synth 8-638] synthesizing module 'bd_929b_c_shift_ram_0_0' [/home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.runs/design_1_axi_ethernet_0_0_synth_1/.Xil/Vivado-23100-gapapaio/realtime/bd_929b_c_shift_ram_0_0_stub.vhdl:23]
+INFO: [Synth 8-3491] module 'bd_929b_eth_buf_0' declared at '/home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.runs/design_1_axi_ethernet_0_0_synth_1/.Xil/Vivado-23100-gapapaio/realtime/bd_929b_eth_buf_0_stub.vhdl:6' bound to instance 'eth_buf' of component 'bd_929b_eth_buf_0' [/home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.gen/sources_1/bd/design_1/ip/design_1_axi_ethernet_0_0/bd_0/synth/bd_929b.vhd:435]
+INFO: [Synth 8-638] synthesizing module 'bd_929b_eth_buf_0' [/home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.runs/design_1_axi_ethernet_0_0_synth_1/.Xil/Vivado-23100-gapapaio/realtime/bd_929b_eth_buf_0_stub.vhdl:120]
+INFO: [Synth 8-3491] module 'bd_929b_mac_0' declared at '/home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.runs/design_1_axi_ethernet_0_0_synth_1/.Xil/Vivado-23100-gapapaio/realtime/bd_929b_mac_0_stub.vhdl:6' bound to instance 'mac' of component 'bd_929b_mac_0' [/home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.gen/sources_1/bd/design_1/ip/design_1_axi_ethernet_0_0/bd_0/synth/bd_929b.vhd:540]
+INFO: [Synth 8-638] synthesizing module 'bd_929b_mac_0' [/home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.runs/design_1_axi_ethernet_0_0_synth_1/.Xil/Vivado-23100-gapapaio/realtime/bd_929b_mac_0_stub.vhdl:76]
+INFO: [Synth 8-3491] module 'bd_929b_util_vector_logic_0_0' declared at '/home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.runs/design_1_axi_ethernet_0_0_synth_1/.Xil/Vivado-23100-gapapaio/realtime/bd_929b_util_vector_logic_0_0_stub.vhdl:6' bound to instance 'util_vector_logic_0' of component 'bd_929b_util_vector_logic_0_0' [/home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.gen/sources_1/bd/design_1/ip/design_1_axi_ethernet_0_0/bd_0/synth/bd_929b.vhd:625]
+INFO: [Synth 8-638] synthesizing module 'bd_929b_util_vector_logic_0_0' [/home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.runs/design_1_axi_ethernet_0_0_synth_1/.Xil/Vivado-23100-gapapaio/realtime/bd_929b_util_vector_logic_0_0_stub.vhdl:20]
+INFO: [Synth 8-3491] module 'bd_929b_xlconstant_0_0' declared at '/home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.gen/sources_1/bd/design_1/ip/design_1_axi_ethernet_0_0/bd_0/ip/ip_4/synth/bd_929b_xlconstant_0_0.v:53' bound to instance 'xlconstant_0' of component 'bd_929b_xlconstant_0_0' [/home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.gen/sources_1/bd/design_1/ip/design_1_axi_ethernet_0_0/bd_0/synth/bd_929b.vhd:630]
+INFO: [Synth 8-6157] synthesizing module 'bd_929b_xlconstant_0_0' [/home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.gen/sources_1/bd/design_1/ip/design_1_axi_ethernet_0_0/bd_0/ip/ip_4/synth/bd_929b_xlconstant_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_10_xlconstant' [/home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.gen/sources_1/bd/design_1/ipshared/a165/hdl/xlconstant_v1_1_vl_rfs.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_10_xlconstant' (0#1) [/home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.gen/sources_1/bd/design_1/ipshared/a165/hdl/xlconstant_v1_1_vl_rfs.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'bd_929b_xlconstant_0_0' (0#1) [/home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.gen/sources_1/bd/design_1/ip/design_1_axi_ethernet_0_0/bd_0/ip/ip_4/synth/bd_929b_xlconstant_0_0.v:53]
+INFO: [Synth 8-256] done synthesizing module 'bd_929b' (0#1) [/home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.gen/sources_1/bd/design_1/ip/design_1_axi_ethernet_0_0/bd_0/synth/bd_929b.vhd:81]
+INFO: [Synth 8-256] done synthesizing module 'design_1_axi_ethernet_0_0' (0#1) [/home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.gen/sources_1/bd/design_1/ip/design_1_axi_ethernet_0_0/synth/design_1_axi_ethernet_0_0.vhd:121]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2205.203 ; gain = 519.680 ; free physical = 2550 ; free virtual = 5431
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2217.078 ; gain = 531.555 ; free physical = 2550 ; free virtual = 5430
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2217.078 ; gain = 531.555 ; free physical = 2550 ; free virtual = 5430
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2217.078 ; gain = 0.000 ; free physical = 2548 ; free virtual = 5428
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.gen/sources_1/bd/design_1/ip/design_1_axi_ethernet_0_0/bd_0/ip/ip_0/bd_929b_eth_buf_0/bd_929b_eth_buf_0_in_context.xdc] for cell 'U0/eth_buf'
+Finished Parsing XDC File [/home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.gen/sources_1/bd/design_1/ip/design_1_axi_ethernet_0_0/bd_0/ip/ip_0/bd_929b_eth_buf_0/bd_929b_eth_buf_0_in_context.xdc] for cell 'U0/eth_buf'
+Parsing XDC File [/home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.gen/sources_1/bd/design_1/ip/design_1_axi_ethernet_0_0/bd_0/ip/ip_1/bd_929b_mac_0/bd_929b_mac_0_in_context.xdc] for cell 'U0/mac'
+Finished Parsing XDC File [/home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.gen/sources_1/bd/design_1/ip/design_1_axi_ethernet_0_0/bd_0/ip/ip_1/bd_929b_mac_0/bd_929b_mac_0_in_context.xdc] for cell 'U0/mac'
+Parsing XDC File [/home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.gen/sources_1/bd/design_1/ip/design_1_axi_ethernet_0_0/bd_0/ip/ip_2/bd_929b_c_shift_ram_0_0/bd_929b_c_shift_ram_0_0_in_context.xdc] for cell 'U0/c_shift_ram_0'
+Finished Parsing XDC File [/home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.gen/sources_1/bd/design_1/ip/design_1_axi_ethernet_0_0/bd_0/ip/ip_2/bd_929b_c_shift_ram_0_0/bd_929b_c_shift_ram_0_0_in_context.xdc] for cell 'U0/c_shift_ram_0'
+Parsing XDC File [/home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.gen/sources_1/bd/design_1/ip/design_1_axi_ethernet_0_0/bd_0/ip/ip_3/bd_929b_c_counter_binary_0_0/bd_929b_c_counter_binary_0_0_in_context.xdc] for cell 'U0/c_counter_binary_0'
+Finished Parsing XDC File [/home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.gen/sources_1/bd/design_1/ip/design_1_axi_ethernet_0_0/bd_0/ip/ip_3/bd_929b_c_counter_binary_0_0/bd_929b_c_counter_binary_0_0_in_context.xdc] for cell 'U0/c_counter_binary_0'
+Parsing XDC File [/home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.gen/sources_1/bd/design_1/ip/design_1_axi_ethernet_0_0/bd_0/ip/ip_5/bd_929b_util_vector_logic_0_0/bd_929b_util_vector_logic_0_0_in_context.xdc] for cell 'U0/util_vector_logic_0'
+Finished Parsing XDC File [/home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.gen/sources_1/bd/design_1/ip/design_1_axi_ethernet_0_0/bd_0/ip/ip_5/bd_929b_util_vector_logic_0_0/bd_929b_util_vector_logic_0_0_in_context.xdc] for cell 'U0/util_vector_logic_0'
+Parsing XDC File [/home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.gen/sources_1/bd/design_1/ip/design_1_axi_ethernet_0_0/synth/design_1_axi_ethernet_0_0_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [/home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.gen/sources_1/bd/design_1/ip/design_1_axi_ethernet_0_0/synth/design_1_axi_ethernet_0_0_ooc.xdc] for cell 'U0'
+Parsing XDC File [/home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.gen/sources_1/bd/design_1/ip/design_1_axi_ethernet_0_0/design_1_axi_ethernet_0_0_board.xdc] for cell 'U0'
+Finished Parsing XDC File [/home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.gen/sources_1/bd/design_1/ip/design_1_axi_ethernet_0_0/design_1_axi_ethernet_0_0_board.xdc] for cell 'U0'
+Parsing XDC File [/home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.gen/sources_1/bd/design_1/ip/design_1_axi_ethernet_0_0/synth/design_1_axi_ethernet_0_0.xdc] for cell 'U0'
+Finished Parsing XDC File [/home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.gen/sources_1/bd/design_1/ip/design_1_axi_ethernet_0_0/synth/design_1_axi_ethernet_0_0.xdc] for cell 'U0'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.gen/sources_1/bd/design_1/ip/design_1_axi_ethernet_0_0/synth/design_1_axi_ethernet_0_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_axi_ethernet_0_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_axi_ethernet_0_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [/home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.runs/design_1_axi_ethernet_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.runs/design_1_axi_ethernet_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2282.012 ; gain = 0.000 ; free physical = 3895 ; free virtual = 6777
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2282.047 ; gain = 0.000 ; free physical = 3902 ; free virtual = 6784
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2282.047 ; gain = 596.523 ; free physical = 5643 ; free virtual = 8539
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2290.016 ; gain = 604.492 ; free physical = 5643 ; free virtual = 8539
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2290.016 ; gain = 604.492 ; free physical = 5620 ; free virtual = 8517
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2290.016 ; gain = 604.492 ; free physical = 5557 ; free virtual = 8454
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2290.016 ; gain = 604.492 ; free physical = 5230 ; free virtual = 8131
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2379.016 ; gain = 693.492 ; free physical = 3054 ; free virtual = 6004
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2380.016 ; gain = 694.492 ; free physical = 3054 ; free virtual = 6004
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2389.031 ; gain = 703.508 ; free physical = 3023 ; free virtual = 5973
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 2563.844 ; gain = 878.320 ; free physical = 2409 ; free virtual = 5372
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 2563.844 ; gain = 878.320 ; free physical = 2409 ; free virtual = 5372
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 2563.844 ; gain = 878.320 ; free physical = 2409 ; free virtual = 5372
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 2563.844 ; gain = 878.320 ; free physical = 2409 ; free virtual = 5372
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 2563.844 ; gain = 878.320 ; free physical = 2409 ; free virtual = 5372
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 2563.844 ; gain = 878.320 ; free physical = 2409 ; free virtual = 5372
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+------------------------------+----------+
+|      |BlackBox name                 |Instances |
++------+------------------------------+----------+
+|1     |bd_929b_c_counter_binary_0_0  |         1|
+|2     |bd_929b_c_shift_ram_0_0       |         1|
+|3     |bd_929b_eth_buf_0             |         1|
+|4     |bd_929b_mac_0                 |         1|
+|5     |bd_929b_util_vector_logic_0_0 |         1|
++------+------------------------------+----------+
+
+Report Cell Usage: 
++------+-----------------------------------+------+
+|      |Cell                               |Count |
++------+-----------------------------------+------+
+|1     |bd_929b_c_counter_binary_0_0_bbox  |     1|
+|2     |bd_929b_c_shift_ram_0_0_bbox       |     1|
+|3     |bd_929b_eth_buf_0_bbox             |     1|
+|4     |bd_929b_mac_0_bbox                 |     1|
+|5     |bd_929b_util_vector_logic_0_0_bbox |     1|
++------+-----------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 2563.844 ; gain = 878.320 ; free physical = 2409 ; free virtual = 5372
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2563.844 ; gain = 813.352 ; free physical = 2402 ; free virtual = 5363
+Synthesis Optimization Complete : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 2563.852 ; gain = 878.320 ; free physical = 2402 ; free virtual = 5363
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2563.852 ; gain = 0.000 ; free physical = 2408 ; free virtual = 5370
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2563.852 ; gain = 0.000 ; free physical = 2482 ; free virtual = 5443
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 6bc0fa24
+INFO: [Common 17-83] Releasing license: Synthesis
+37 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:21 . Memory (MB): peak = 2563.879 ; gain = 1051.348 ; free physical = 2472 ; free virtual = 5434
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1506.955; main = 1506.955; forked = 200.891
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3245.875; main = 2563.848; forked = 963.859
+INFO: [Common 17-1381] The checkpoint '/home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.runs/design_1_axi_ethernet_0_0_synth_1/design_1_axi_ethernet_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_axi_ethernet_0_0, cache-ID = bb22e2bb1166a39b
+INFO: [Coretcl 2-1174] Renamed 6 cell refs.
+INFO: [Common 17-1381] The checkpoint '/home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.runs/design_1_axi_ethernet_0_0_synth_1/design_1_axi_ethernet_0_0.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file design_1_axi_ethernet_0_0_utilization_synth.rpt -pb design_1_axi_ethernet_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Jan 29 00:04:05 2026...

@@ -1,0 +1,384 @@
+#-----------------------------------------------------------
+# Vivado v2025.1 (64-bit)
+# SW Build 6140274 on Wed May 21 22:58:25 MDT 2025
+# IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+# SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+# Start of session at: Thu Jan 29 01:38:02 2026
+# Process ID         : 209712
+# Current directory  : /home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.runs/design_1_axi_custom_aes_128_a_0_0_synth_1
+# Command line       : vivado -log design_1_axi_custom_aes_128_a_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_axi_custom_aes_128_a_0_0.tcl
+# Log file           : /home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.runs/design_1_axi_custom_aes_128_a_0_0_synth_1/design_1_axi_custom_aes_128_a_0_0.vds
+# Journal file       : /home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.runs/design_1_axi_custom_aes_128_a_0_0_synth_1/vivado.jou
+# Running On         : gapapaio
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.3 LTS
+# Processor Detail   : AMD Ryzen 7 5800H with Radeon Graphics
+# CPU Frequency      : 4389.998 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 16069 MB
+# Swap memory        : 4294 MB
+# Total Virtual      : 20364 MB
+# Available Virtual  : 10337 MB
+#-----------------------------------------------------------
+source design_1_axi_custom_aes_128_a_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/miguelovila/SimplifiedIotGateway/CustomIps'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/xilinx/2025.1/Vivado/data/ip'.
+Command: synth_design -top design_1_axi_custom_aes_128_a_0_0 -part xc7a100tcsg324-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 210023
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2113.262 ; gain = 440.711 ; free physical = 929 ; free virtual = 7488
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_custom_aes_128_a_0_0' [/home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.gen/sources_1/bd/design_1/ip/design_1_axi_custom_aes_128_a_0_0/synth/design_1_axi_custom_aes_128_a_0_0.vhd:82]
+	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S00_AXI_ADDR_WIDTH bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'axi_custom_aes_128_accel' declared at '/home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.gen/sources_1/bd/design_1/ipshared/f7a4/hdl/axi_custom_aes_128_accel.vhd:5' bound to instance 'U0' of component 'axi_custom_aes_128_accel' [/home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.gen/sources_1/bd/design_1/ip/design_1_axi_custom_aes_128_a_0_0/synth/design_1_axi_custom_aes_128_a_0_0.vhd:150]
+INFO: [Synth 8-638] synthesizing module 'axi_custom_aes_128_accel' [/home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.gen/sources_1/bd/design_1/ipshared/f7a4/hdl/axi_custom_aes_128_accel.vhd:49]
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'axi_custom_aes_128_accel_slave_lite_v1_0_S00_AXI' declared at '/home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.gen/sources_1/bd/design_1/ipshared/f7a4/hdl/axi_custom_aes_128_accel_slave_lite_v1_0_S00_AXI.vhd:6' bound to instance 'axi_custom_aes_128_accel_slave_lite_v1_0_S00_AXI_inst' of component 'axi_custom_aes_128_accel_slave_lite_v1_0_S00_AXI' [/home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.gen/sources_1/bd/design_1/ipshared/f7a4/hdl/axi_custom_aes_128_accel.vhd:85]
+INFO: [Synth 8-638] synthesizing module 'axi_custom_aes_128_accel_slave_lite_v1_0_S00_AXI' [/home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.gen/sources_1/bd/design_1/ipshared/f7a4/hdl/axi_custom_aes_128_accel_slave_lite_v1_0_S00_AXI.vhd:87]
+INFO: [Synth 8-638] synthesizing module 'aes_core' [/home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.gen/sources_1/bd/design_1/ipshared/f7a4/src/aes_core.vhd:19]
+INFO: [Synth 8-638] synthesizing module 'aes_round' [/home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.gen/sources_1/bd/design_1/ipshared/f7a4/src/aes_round.vhd:19]
+INFO: [Synth 8-638] synthesizing module 'sub_bytes' [/home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.gen/sources_1/bd/design_1/ipshared/f7a4/src/sub_bytes.vhd:21]
+INFO: [Synth 8-638] synthesizing module 'sbox' [/home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.gen/sources_1/bd/design_1/ipshared/f7a4/src/sbox.vhd:13]
+INFO: [Synth 8-226] default block is never used [/home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.gen/sources_1/bd/design_1/ipshared/f7a4/src/sbox.vhd:15]
+INFO: [Synth 8-256] done synthesizing module 'sbox' (0#1) [/home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.gen/sources_1/bd/design_1/ipshared/f7a4/src/sbox.vhd:13]
+INFO: [Synth 8-256] done synthesizing module 'sub_bytes' (0#1) [/home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.gen/sources_1/bd/design_1/ipshared/f7a4/src/sub_bytes.vhd:21]
+INFO: [Synth 8-638] synthesizing module 'shift_rows' [/home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.gen/sources_1/bd/design_1/ipshared/f7a4/src/shift_rows.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'shift_rows' (0#1) [/home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.gen/sources_1/bd/design_1/ipshared/f7a4/src/shift_rows.vhd:22]
+INFO: [Synth 8-638] synthesizing module 'mix_columns' [/home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.gen/sources_1/bd/design_1/ipshared/f7a4/src/mix_columns.vhd:47]
+INFO: [Synth 8-638] synthesizing module 'gf_mult_by2' [/home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.gen/sources_1/bd/design_1/ipshared/f7a4/src/gf_mult_by2.vhd:46]
+INFO: [Synth 8-256] done synthesizing module 'gf_mult_by2' (0#1) [/home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.gen/sources_1/bd/design_1/ipshared/f7a4/src/gf_mult_by2.vhd:46]
+INFO: [Synth 8-256] done synthesizing module 'mix_columns' (0#1) [/home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.gen/sources_1/bd/design_1/ipshared/f7a4/src/mix_columns.vhd:47]
+INFO: [Synth 8-638] synthesizing module 'add_round_key' [/home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.gen/sources_1/bd/design_1/ipshared/f7a4/src/add_round_key.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'add_round_key' (0#1) [/home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.gen/sources_1/bd/design_1/ipshared/f7a4/src/add_round_key.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'aes_round' (0#1) [/home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.gen/sources_1/bd/design_1/ipshared/f7a4/src/aes_round.vhd:19]
+INFO: [Synth 8-638] synthesizing module 'key_expansion' [/home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.gen/sources_1/bd/design_1/ipshared/f7a4/src/key_expansion.vhd:51]
+INFO: [Synth 8-256] done synthesizing module 'key_expansion' (0#1) [/home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.gen/sources_1/bd/design_1/ipshared/f7a4/src/key_expansion.vhd:51]
+INFO: [Synth 8-226] default block is never used [/home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.gen/sources_1/bd/design_1/ipshared/f7a4/src/aes_core.vhd:76]
+INFO: [Synth 8-256] done synthesizing module 'aes_core' (0#1) [/home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.gen/sources_1/bd/design_1/ipshared/f7a4/src/aes_core.vhd:19]
+INFO: [Synth 8-256] done synthesizing module 'axi_custom_aes_128_accel_slave_lite_v1_0_S00_AXI' (0#1) [/home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.gen/sources_1/bd/design_1/ipshared/f7a4/hdl/axi_custom_aes_128_accel_slave_lite_v1_0_S00_AXI.vhd:87]
+INFO: [Synth 8-256] done synthesizing module 'axi_custom_aes_128_accel' (0#1) [/home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.gen/sources_1/bd/design_1/ipshared/f7a4/hdl/axi_custom_aes_128_accel.vhd:49]
+INFO: [Synth 8-256] done synthesizing module 'design_1_axi_custom_aes_128_a_0_0' (0#1) [/home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.gen/sources_1/bd/design_1/ip/design_1_axi_custom_aes_128_a_0_0/synth/design_1_axi_custom_aes_128_a_0_0.vhd:82]
+WARNING: [Synth 8-7129] Port S_AXI_AWPROT[2] in module axi_custom_aes_128_accel_slave_lite_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWPROT[1] in module axi_custom_aes_128_accel_slave_lite_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWPROT[0] in module axi_custom_aes_128_accel_slave_lite_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARPROT[2] in module axi_custom_aes_128_accel_slave_lite_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARPROT[1] in module axi_custom_aes_128_accel_slave_lite_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARPROT[0] in module axi_custom_aes_128_accel_slave_lite_v1_0_S00_AXI is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2200.199 ; gain = 527.648 ; free physical = 817 ; free virtual = 7377
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2218.012 ; gain = 545.461 ; free physical = 818 ; free virtual = 7378
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2218.012 ; gain = 545.461 ; free physical = 818 ; free virtual = 7378
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2218.012 ; gain = 0.000 ; free physical = 821 ; free virtual = 7381
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2334.750 ; gain = 0.000 ; free physical = 728 ; free virtual = 7288
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2334.785 ; gain = 0.000 ; free physical = 723 ; free virtual = 7283
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2334.785 ; gain = 662.234 ; free physical = 625 ; free virtual = 7186
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2342.754 ; gain = 670.203 ; free physical = 625 ; free virtual = 7186
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2342.754 ; gain = 670.203 ; free physical = 625 ; free virtual = 7186
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'fsm_state_reg' in module 'aes_core'
+INFO: [Synth 8-802] inferred FSM for state register 'state_write_reg' in module 'axi_custom_aes_128_accel_slave_lite_v1_0_S00_AXI'
+INFO: [Synth 8-802] inferred FSM for state register 'state_read_reg' in module 'axi_custom_aes_128_accel_slave_lite_v1_0_S00_AXI'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                             0001 |                               00
+                  rounds |                             0010 |                               01
+                   final |                             0100 |                               10
+                 done_st |                             1000 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'fsm_state_reg' using encoding 'one-hot' in module 'aes_core'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                              001 |                               00
+                   waddr |                              010 |                               10
+                   wdata |                              100 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_write_reg' using encoding 'one-hot' in module 'axi_custom_aes_128_accel_slave_lite_v1_0_S00_AXI'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                               00 |                               00
+                   raddr |                               01 |                               10
+                   rdata |                               10 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_read_reg' using encoding 'sequential' in module 'axi_custom_aes_128_accel_slave_lite_v1_0_S00_AXI'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2342.754 ; gain = 670.203 ; free physical = 625 ; free virtual = 7187
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    4 Bit       Adders := 1     
++---XORs : 
+	   2 Input    128 Bit         XORs := 2     
+	   2 Input     32 Bit         XORs := 4     
+	   2 Input      8 Bit         XORs := 21    
+	   3 Input      8 Bit         XORs := 10    
+	   5 Input      8 Bit         XORs := 6     
+	   4 Input      8 Bit         XORs := 2     
++---Registers : 
+	              128 Bit    Registers := 2     
+	               32 Bit    Registers := 11    
+	                6 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   2 Input  128 Bit        Muxes := 2     
+	   4 Input  128 Bit        Muxes := 2     
+	   2 Input   32 Bit        Muxes := 11    
+	  12 Input   32 Bit        Muxes := 11    
+	   2 Input    8 Bit        Muxes := 1     
+	   4 Input    4 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 1     
+	   3 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 3     
+	   3 Input    2 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 4     
+	   4 Input    1 Bit        Muxes := 4     
+	   3 Input    1 Bit        Muxes := 12    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port S_AXI_AWPROT[2] in module axi_custom_aes_128_accel_slave_lite_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWPROT[1] in module axi_custom_aes_128_accel_slave_lite_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWPROT[0] in module axi_custom_aes_128_accel_slave_lite_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARPROT[2] in module axi_custom_aes_128_accel_slave_lite_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARPROT[1] in module axi_custom_aes_128_accel_slave_lite_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARPROT[0] in module axi_custom_aes_128_accel_slave_lite_v1_0_S00_AXI is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2342.754 ; gain = 670.203 ; free physical = 576 ; free virtual = 7138
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping Report
++------------+---------------------------------------------------------+---------------+----------------+
+|Module Name | RTL Object                                              | Depth x Width | Implemented As | 
++------------+---------------------------------------------------------+---------------+----------------+
+|sbox        | output_byte                                             | 256x8         | LUT            | 
+|aes_core    | RoundInst/SubBytes/gen_sboxes[11].sbox_inst/output_byte | 256x8         | Block RAM      | 
+|aes_core    | RoundInst/SubBytes/gen_sboxes[6].sbox_inst/output_byte  | 256x8         | Block RAM      | 
+|aes_core    | RoundInst/SubBytes/gen_sboxes[1].sbox_inst/output_byte  | 256x8         | Block RAM      | 
+|aes_core    | RoundInst/SubBytes/gen_sboxes[12].sbox_inst/output_byte | 256x8         | Block RAM      | 
+|aes_core    | RoundInst/SubBytes/gen_sboxes[7].sbox_inst/output_byte  | 256x8         | Block RAM      | 
+|aes_core    | RoundInst/SubBytes/gen_sboxes[2].sbox_inst/output_byte  | 256x8         | Block RAM      | 
+|aes_core    | RoundInst/SubBytes/gen_sboxes[13].sbox_inst/output_byte | 256x8         | Block RAM      | 
+|aes_core    | RoundInst/SubBytes/gen_sboxes[8].sbox_inst/output_byte  | 256x8         | Block RAM      | 
+|aes_core    | RoundInst/SubBytes/gen_sboxes[3].sbox_inst/output_byte  | 256x8         | Block RAM      | 
+|aes_core    | RoundInst/SubBytes/gen_sboxes[14].sbox_inst/output_byte | 256x8         | Block RAM      | 
+|aes_core    | RoundInst/SubBytes/gen_sboxes[9].sbox_inst/output_byte  | 256x8         | Block RAM      | 
+|aes_core    | RoundInst/SubBytes/gen_sboxes[4].sbox_inst/output_byte  | 256x8         | Block RAM      | 
+|aes_core    | RoundInst/SubBytes/gen_sboxes[10].sbox_inst/output_byte | 256x8         | Block RAM      | 
+|aes_core    | RoundInst/SubBytes/gen_sboxes[5].sbox_inst/output_byte  | 256x8         | Block RAM      | 
+|aes_core    | RoundInst/SubBytes/gen_sboxes[0].sbox_inst/output_byte  | 256x8         | Block RAM      | 
+|aes_core    | KeyExtensionInst/sbox_0/output_byte                     | 256x8         | Block RAM      | 
+|aes_core    | KeyExtensionInst/sbox_1/output_byte                     | 256x8         | Block RAM      | 
+|aes_core    | key_reg_reg_rep                                         | 256x8         | Block RAM      | 
+|aes_core    | KeyExtensionInst/sbox_3/output_byte                     | 256x8         | Block RAM      | 
++------------+---------------------------------------------------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2384.754 ; gain = 712.203 ; free physical = 494 ; free virtual = 7057
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2386.754 ; gain = 714.203 ; free physical = 494 ; free virtual = 7057
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance U0/i_224 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/i_224 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/i_225 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/i_225 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/i_226 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/i_226 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/i_227 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/i_227 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/i_228 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/i_228 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/i_229 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/i_229 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/axi_custom_aes_128_accel_slave_lite_v1_0_S00_AXI_inst/aes_core_inst/state_reg_reg_rep (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/axi_custom_aes_128_accel_slave_lite_v1_0_S00_AXI_inst/aes_core_inst/state_reg_reg_rep (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/i_230 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/i_230 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/i_231 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/i_231 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/i_232 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U0/i_232 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2404.777 ; gain = 732.227 ; free physical = 478 ; free virtual = 7041
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2567.590 ; gain = 895.039 ; free physical = 349 ; free virtual = 6912
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2567.590 ; gain = 895.039 ; free physical = 349 ; free virtual = 6912
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2567.590 ; gain = 895.039 ; free physical = 350 ; free virtual = 6913
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2567.590 ; gain = 895.039 ; free physical = 350 ; free virtual = 6913
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2570.559 ; gain = 898.008 ; free physical = 334 ; free virtual = 6898
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2570.559 ; gain = 898.008 ; free physical = 334 ; free virtual = 6898
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |LUT1     |     1|
+|2     |LUT2     |   101|
+|3     |LUT3     |     7|
+|4     |LUT4     |   131|
+|5     |LUT5     |   269|
+|6     |LUT6     |   538|
+|7     |MUXF7    |    64|
+|8     |MUXF8    |    32|
+|9     |RAMB18E1 |    10|
+|10    |FDRE     |   634|
+|11    |FDSE     |     5|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2570.559 ; gain = 898.008 ; free physical = 334 ; free virtual = 6898
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 7 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2570.559 ; gain = 781.234 ; free physical = 327 ; free virtual = 6890
+Synthesis Optimization Complete : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2570.566 ; gain = 898.008 ; free physical = 327 ; free virtual = 6890
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2570.566 ; gain = 0.000 ; free physical = 484 ; free virtual = 7047
+INFO: [Netlist 29-17] Analyzing 106 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2626.586 ; gain = 0.000 ; free physical = 459 ; free virtual = 7022
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 8b886df0
+INFO: [Common 17-83] Releasing license: Synthesis
+72 Infos, 13 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:22 . Memory (MB): peak = 2626.621 ; gain = 1116.094 ; free physical = 451 ; free virtual = 7014
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1590.621; main = 1590.621; forked = 219.839
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3306.617; main = 2626.590; forked = 963.859
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2650.598 ; gain = 0.000 ; free physical = 443 ; free virtual = 7006
+INFO: [Common 17-1381] The checkpoint '/home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.runs/design_1_axi_custom_aes_128_a_0_0_synth_1/design_1_axi_custom_aes_128_a_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_axi_custom_aes_128_a_0_0, cache-ID = e11ba30f8a44ba6d
+INFO: [Coretcl 2-1174] Renamed 5 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2650.598 ; gain = 0.000 ; free physical = 416 ; free virtual = 6980
+INFO: [Common 17-1381] The checkpoint '/home/miguelovila/SimplifiedIotGateway/SimplifiedIotGateway.runs/design_1_axi_custom_aes_128_a_0_0_synth_1/design_1_axi_custom_aes_128_a_0_0.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file design_1_axi_custom_aes_128_a_0_0_utilization_synth.rpt -pb design_1_axi_custom_aes_128_a_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Jan 29 01:38:28 2026...
