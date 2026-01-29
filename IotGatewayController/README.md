@@ -10,14 +10,6 @@ encryption key.
 
 **See specification in IoT Gateway Application README.md**
 
-| Command | Format              | Example                              | Action                          |
-|---------|---------------------|--------------------------------------|---------------------------------|
-| L       | `L<n>`              | `L5`                                 | Toggle LED n (0-15)             |
-| LR      | `LR`                | `LR`                                 | Rotate all LEDs right by 1       |
-| LL      | `LL`                | `LL`                                 | Rotate all LEDs left by 1      |
-| D       | `D<ms>`             | `D1000`                              | Set TX interval in milliseconds |
-| K       | `K<32 hex chars>`   | `K2B7E151628AED2A6ABF7158809CF4F3C`  | Set AES-128 encryption key      |
-
 ## Running the Application
 
 It is expected that you have already installed python3-tkinter on your system as this package is required
